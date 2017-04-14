@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>TTHF | Student Login</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="/static/favicon.ico">  
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300' rel='stylesheet' type='text/css'> 
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
+	<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="/static/css/font-awesome.css">
+    <link rel="stylesheet" href="/static/css/flexslider.css">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="/static/css/styles.css">
+</head> 
+
+<script>
+var error="{{request.args.get('error')}}";
+if(error!='None'){
+alert(error);
+}
+</script>
+
+<body class="login-page access-page has-full-screen-bg">
+    <div class="upper-wrapper" style="background-image:url('fig11.png');">
+        <!-- ******HEADER****** -->
+        <header class="header">  
+            <div class="container">     
+            <h1  class="logo row">
+                <a href="/"><img  class="col-xs-12" src="/static/logo1.png"></a>
+            </h1><!--//logo-->
+                                     
+            </div><!--//container-->
+        </header><!--//header-->
+        
+        <!-- ******Login Section****** --> 
+        <section class="login-section access-section section">
+            <div class="container">
+                <div class="row">
+                    <div class="form-box col-md-offset-3 col-sm-offset-0 xs-offset-0 col-xs-12 col-md-6">     
+                        <div class="form-box-inner">
+                            <h2 class="title text-center">Student Login</h2>                 
+                            <div class="row">
+                                <div class="form-container col-xs-12 col-md-12">
+                                    <form class="login-form" action="stud_login" method="post">              
+                                        <div class="form-group email">
+                                            <label class="sr-only" for="login-email"><i class="fa fa-user-o"></i>Email ID</label>
+                                            <input id="login-email" type="email" name="email" class="form-control login-email" placeholder="Email ID">
+                                        </div><!--//form-group-->
+                                        <div class="form-group password">
+                                            <label class="sr-only" for="login-password">Login Password</label>
+                                            <input id="login-password" type="password" name="pwd" class="form-control login-password" placeholder="Login Password">
+                                            <!--p class="forgot-password"><a href="reset-password.html">Forgot password?</a></p>
+                                        </div><!--//form-group-->
+                                        <button type="submit" class="btn btn-block btn-cta-primary">Log in</button>
+                                        <!--div class="checkbox remember">
+                                            <label>
+                                                <input type="checkbox"> Remember me
+                                            </label>
+                                        </div><!--//checkbox-->
+                                         <p class="lead">Don't have a student account yet? <br /><a class="signup-link" href="register/student">Create your account now</a></p>  
+                                    </form>
+                                </div><!--//form-container-->
+                                <!--div class="social-btns col-md-offset-1 col-sm-offset-0 col-sm-offset-0 col-xs-12 col-md-5">  
+                                    <div class="divider"><span>Or</span></div>                      
+                                    <ul class="list-unstyled social-login">
+                                        <li><button class="twitter-btn btn" type="button"><i class="fa fa-twitter"></i>Log in with Twitter</button></li>
+                                        <li><button class="facebook-btn btn" type="button"><i class="fa fa-facebook"></i>Log in with Facebook</button></li>
+                                        <li><button class="github-btn btn" type="button"><i class="fa fa-github-alt"></i>Log in with Github</button></li>
+                                        <li><button class="google-btn btn" type="button"><i class="fa fa-google" aria-hidden="true"></i>Log in with Google</button></li>
+                                    </ul>
+                                </div><!--//social-btns-->
+                            </div><!--//row-->
+                        </div><!--//form-box-inner-->
+                    </div><!--//form-box-->
+                </div><!--//row-->
+            </div><!--//container-->
+        </section><!--//contact-section-->
+    </div><!--//upper-wrapper-->
+    
+    <!-- ******FOOTER****** --> 
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row has-divider">  
+					 <div class="footer-col links col-md-3 col-xs-12">
+                        <div class="footer-col-inner">
+                            <h3 class="title">Register</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="register/school"><i class="fa fa-caret-right"></i>School Registration</a></li>
+                                <li><a href="register/student"><i class="fa fa-caret-right"></i>Student Registration</a></li>
+                                <li><a href="register/volunteer"><i class="fa fa-caret-right"></i>Volunteer Registration</a></li>
+                                <li><a href="register/internship"><i class="fa fa-caret-right"></i>Internship Registration</a></li>
+								<li><a href="register/business"><i class="fa fa-caret-right"></i>Associate Business Partner Registration</a></li>
+                            </ul>
+                        </div><!--//footer-col-inner-->
+                    </div><!--//foooter-col--> 
+					
+                   
+                                
+                    <div class="footer-col links col-md-3 col-xs-12">
+                        <div class="footer-col-inner">
+                            <h3 class="title">Login</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="school-login"><i class="fa fa-caret-right"></i>School Login</a></li>
+                                <li><a href="student-login"><i class="fa fa-caret-right"></i>Student Login</a></li>
+                                
+                            </ul>
+                        </div><!--//footer-col-inner-->            
+                    </div><!--//foooter-col-->   
+					
+					 <div class="footer-col links col-md-3 col-xs-12">
+                        <div class="footer-col-inner">
+                            <h3 class="title">Activites</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="oat"><i class="fa fa-caret-right"></i>OAT</a></li>
+                                <li><a href="insaf"><i class="fa fa-caret-right"></i>INSAF</a></li>
+                                <li><a href="activity/events"><i class="fa fa-caret-right"></i>Events</a></li>
+                                <li><a href="activity/csr"><i class="fa fa-caret-right"></i>CSR</a></li>
+                                <li><a href="activity/reward"><i class="fa fa-caret-right"></i>Rewards</a></li>
+                            </ul>
+                        </div><!--//footer-col-inner-->
+                    </div><!--//foooter-col--> 
+                    <div class="footer-col contact col-xs-12 col-md-3">
+                        <div class="footer-col-inner">
+                            <h3 class="title">Contact us</h3>                          
+                            <p class="adr clearfix">
+                                <i class="fa fa-map-marker pull-left"></i>        
+                                <span class="adr-group pull-left">       
+                                    <span class="street-address">Talent Treasure Hunt Pvt. Ltr.,</span><br>
+                                    <span class="region">A-404, Shangrila, Hermitage Society,</span><br>
+                                    <span class="postal-code">Mira Road (East),</span><br>
+                                    <span class="country-name">Mumbai - 401107.</span>
+                                </span>                            </p>
+                            <p class="tel"><i class="fa fa-phone"></i>+91 8652542430</p>
+                            <p class="email"><i class="fa fa-envelope-o"></i>sanjay.singh@tthpl.in</p> 
+							<ul class="social list-inline">
+                                <li><a href="https://twitter.com/3rdwave_themes" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>        
+                                <li class="row-end"><a href="#"><i class="fa fa-rss"></i></a></li>             
+                            </ul>
+						</div><!--//footer-col-inner-->
+                    </div><!--//contact-->   
+                </div><!--//row-->
+            </div><!--//container-->
+        </div><!--//footer-content-->
+        <div class="bottom-bar">
+            <div class="container">
+                <small class="copyright">Copyright @ <a href="#" target="_blank">Treasure Talent Hunt Pvt.Ltd.</a></small>                
+            </div><!--//container-->
+        </div><!--//bottom-bar-->
+    </footer><!--//footer-->
+    
+   
+ 
+    <!-- Javascript -->          
+    <script type="text/javascript" src="/static/js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="/static/js/bootstrap-hover-dropdown.min.js"></script>
+    <script type="text/javascript" src="/static/js/back-to-top.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.flexslider-min.js"></script>     
+    <script type="text/javascript" src="/static/js/main.js"></script>
+    
+            
+</body>
+</html> 
+

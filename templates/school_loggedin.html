@@ -1,0 +1,666 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TTHF | {{posts[0]}}</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="/static/favicon.ico">  
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300' rel='stylesheet' type='text/css'> 
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
+	<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="/static/css/font-awesome.css">
+    <link rel="stylesheet" href="/static/css/flexslider.css">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="/static/css/styles.css">
+</head> 
+
+<body class="home-page">   
+    
+    <div class="headline-bg ">
+    </div><!--//headline-bg-->         
+    
+    <!-- ******Video Section****** --> 
+    <section class="features-tabbed section">
+	<h2 class="title"></h2> 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1 col-xs-offset-0"  style="background-color:white; opacity:1;padding-left:50px;padding-right:50px">
+				<section class="faq section" style="background-color:white;">
+					
+					<div class="row">
+						<h2 class="title text-center col-md-12 col-sm-10 col-xs-12">{{posts[0]}}</h2>  
+						<h5 class="col-xs-6 text-center"><a href="" data-toggle="modal" data-target="#modal{{posts[19]}}"><i class="fa fa-edit"></i> Edit Profile</a></h5>
+						<h5 class="col-xs-6 text-center"><a href="" data-toggle="modal" data-target="#logoutmodal"><i class="fa fa-power-off"></i> Logout</a></h5> 
+					</div>  
+					
+					<div class="row">
+						<ul class="nav nav-tabs text-center" role="tablist">
+							<li class="active last"><a href="#details" role="tab" data-toggle="tab"><h3>School Details</h3></a></li>
+						</ul>
+						<div class="tab-content" style="background-color:white; opacity:1; border-bottom:1px;padding-bottom:-100">
+							<div class="tab-pane fade-in active" id="details">
+								<p class="text-left col-md-7 col-sm-10 col-xs-12"><b>Board:</b> {{posts[1]}}</p> 
+								<p class="text-left col-md-5 col-sm-10 col-xs-12"><b>Type:</b> {{posts[2]}}</p> 
+								<p class="text-left col-md-7 col-sm-10 col-xs-12"><b>Address:</b> {{posts[4]}}</p> 
+								<p class="text-left col-md-5 col-sm-10 col-xs-12"><b>City:</b> {{posts[5]}}</p>
+								<p class="text-left col-md-7 col-sm-10 col-xs-12"><b>State:</b> {{posts[6]}}</p> 
+								<p class="text-left col-md-5 col-sm-10 col-xs-12"><b>Zip:</b> {{posts[7]}}</p>
+								<p class="text-left col-md-7 col-sm-10 col-xs-12"><b>School Code:</b> {{posts[20]}}</p> 
+								<p class="text-left col-md-5 col-sm-10 col-xs-12"><b>Phone Number:</b> {{posts[3]}}</p> 
+								<p class="text-left col-md-7 col-sm-10 col-xs-12"><b>Email:</b> {{posts[8]}}</p> 
+								<p class="text-left col-md-5 col-sm-10 col-xs-12"><b>Website Link:</b> {{posts[10]}}</p>  
+							</div>
+						</div>
+					</div>
+					<hr>					
+					
+					<div class="row">
+						<ul class="nav nav-tabs text-center" role="tablist">
+							<li class="active last"><a href="#pi" role="tab" data-toggle="tab"><h3>School Coordinator Details</h3></a></li>
+						</ul>
+						<div class="tab-content" style="background-color:white; opacity:1; border-bottom:1px;padding-bottom:-100">
+							<div class="tab-pane fade-in active" id="pi">
+								<p class="text-left col-md-7 col-sm-10 col-xs-12"></p>
+								<p class="text-left col-md-7 col-sm-10 col-xs-12"><b>Name:</b> {{posts[11]}}</p> 
+								<p class="text-left col-md-5 col-sm-10 col-xs-12"><b>Name:</b> {{posts[15]}}</p> 
+								<p class="text-left col-md-7 col-sm-10 col-xs-12"><b>Designation:</b> {{posts[12]}}</p> 
+								<p class="text-left col-md-5 col-sm-10 col-xs-12"><b>Designation:</b> {{posts[16]}}</p>
+								<p class="text-left col-md-7 col-sm-10 col-xs-12"><b>Phone Number:</b> {{posts[13]}}</p> 
+								<p class="text-left col-md-5 col-sm-10 col-xs-12"><b>Phone Number:</b> {{posts[17]}}</p>
+								<p class="text-left col-md-7 col-sm-10 col-xs-12"><b>Email:</b> {{posts[14]}}</p> 
+								<p class="text-left col-md-5 col-sm-10 col-xs-12"><b>Email:</b> {{posts[18]}}</p> 
+							</div>
+						</div>
+					</div>
+					
+					<hr>
+					<br><br><br><br>
+					
+					<div class="row">
+						<ul class="nav nav-tabs text-center" role="tablist">
+							<li class="active last"><a href="#rank" role="tab" data-toggle="tab"><h3>Student Details</h3></a></li>
+						</ul>
+						<div class="tab-content" style="background-color:white; opacity:1; border-bottom:1px">
+							<div class="tab-pane fade-in active" id="rank">
+							
+								{% for post in stud_posts %}	<!-- select * from student where sname=session.get(id) orderby Class -->
+								<div class="panel">
+									<div class="panel-heading">
+										<h4 class="panel-title"><a data-parent="#accordion"
+										data-toggle="collapse" class="panel-toggle" href="#stud{{post[17]}}"><i class="fa fa-plus-square"></i>&nbsp;&nbsp;&nbsp;{{post[0]}} {{post[1]}} / Class: {{posts[4]}} {{posts[5]}}</a></h4>
+									</div>
+						
+									<div class="panel-collapse collapse" id="stud{{post[17]}}">
+										<div class="panel-body">
+											<div class="row">
+												<div class="member col-md-5 col-sm-6 col-xs-12">
+													<div class="member-inner">
+														<figure class="profile">
+															<img class="img-responsive" src="{{post[16]}}" alt=""/>
+														</figure><!--//profile-->
+													</div><!--//member-inner-->
+												</div><!--//member-->
+												{% with	rank = g.db.execute('select * from rank where Stud_Id=?',[post[17]]).fetchall()  %}
+												
+												<div class="col-md-7">
+													<p class="text-left col-md-12 col-sm-10 col-xs-12"><b>Name:</b> {{post[0]}} {{post[1]}}</p> 
+													<p class="text-left col-md-12 col-sm-10 col-xs-12"><b>Roll Number:</b> {{post[6]}}</p>
+													<p class="text-left col-md-12 col-sm-10 col-xs-12"><b>Class Rank:</b> {{rank[0][5]}}</p> 
+													<p class="text-left col-md-12 col-sm-10 col-xs-12"><b>School Rank:</b> {{rank[0][4]}}</p> 
+													<p class="text-left col-md-12 col-sm-10 col-xs-12"><b>State Rank:</b> {{rank[0][3]}}</p> 
+													<p class="text-left col-md-12 col-sm-10 col-xs-12"><b>National Rank:</b> {{rank[0][2]}}</p> 
+												</div>
+												
+												{% endwith %}
+											</div>
+											<p><a class="btn btn-cta btn-cta-primary col-md-12" href="https://wrapbootstrap.com/theme/velocity-designed-for-products-WB0N38R04" target="_blank"><i class="fa fa-download"></i>Download Detailed Talent Report</a></p>						
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+								
+							</div>
+						</div>
+					</div>
+					<hr>
+				</section><!--//faq-->
+				</div><!--//tab-pane-->
+            </div><!--//row-->
+        </div><!--//container-->
+    </section><!--//features-tabbed-->
+	
+		
+	<div class="modal fade" id="logoutmodal" role="dialog">
+		<div class="modal-dialog">
+		
+		  <!-- Modal content-->
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			  <h4 class="modal-title text-center">Are you sure you want to logout?</h4>
+			</div>
+			
+			<div class="modal-body">
+			<form class="form-horizontal" action="school_logout" method=""  id="reg_form">
+				<div class="form-group">
+					<label class="col-md-4 control-label"></label>
+					<div class="col-md-4">
+					  <button type="submit" name="remove"  class="btn btn-warning" >Yes</span></button>
+					  <button type="button" class="btn btn-warning" data-dismiss="modal">No</button>
+					</div>
+				 </div>
+			</form>
+			  
+			</div>
+		  </div>
+		  
+		</div>
+    </div>
+	
+	
+										   <div class="modal fade" id="modal{{posts[19]}}" role="dialog">
+												<div class="modal-dialog">
+												
+												  <!-- Modal content-->
+												  <div class="modal-content">
+													<div class="modal-header">
+													  <button type="button" class="close" data-dismiss="modal">&times;</button>
+													  <h4 class="modal-title">School Details</h4>
+													</div>
+													<div class="modal-body">
+													 
+													  
+																<form class="form-horizontal" action="school_pers_update" method="post"  id="reg_form">
+																	<fieldset>
+																	  
+																	  <div class="form-group">
+																		<label class="col-md-4 control-label">School Name</label>
+																		<div class="col-md-6  inputGroupContainer">
+																		  <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+																			<input  name="sname" placeholder="{{posts[0]}}" value="{{posts[0]}}" class="form-control"  type="text">
+																		  </div>
+																		</div>
+																	  </div>
+	  
+																	   <div class="form-group">
+																		<label class="col-md-4 control-label">School Code</label>
+																		<div class="col-md-6  inputGroupContainer">
+																		  <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+																			<input  name="sid" placeholder="{{posts[20]}}" value="{{posts[20]}}" class="form-control"  type="text">
+																		  </div>
+																		</div>
+																	  </div>
+																	  
+																	  <!-- Text input-->
+																	  
+																	  <div class="form-group">
+																		<label class="col-md-4 control-label" >Board</label>
+																		<div class="col-md-6  inputGroupContainer">
+																		  <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"></i></span>
+																			<input name="board" placeholder="{{posts[1]}}" value="{{posts[1]}}" class="form-control"  type="text">
+																		  </div>
+																		</div>
+																	  </div>
+																	  
+																	  <div class="form-group">
+																		<label class="col-md-4 control-label" >Type</label>
+																		<div class="col-md-6  inputGroupContainer">
+																		  <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"></i></span>
+																			<input name="type" placeholder="{{posts[2]}}" value="{{posts[2]}}" class="form-control"  type="text">
+																		  </div>
+																		</div>
+																	  </div>
+																	  
+																	  
+																	
+																	  <!-- Text input-->
+																	  
+																	  <div class="form-group">
+																		<label class="col-md-4 control-label">Phone #</label>
+																		<div class="col-md-6  inputGroupContainer">
+																		  <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+																			<input name="phone" placeholder="{{posts[3]}}" value="{{posts[3]}}" class="form-control" type="text">
+																		  </div>
+																		</div>
+																	  </div>
+																	  
+																	  <!-- Text input-->
+																	  
+																	  <div class="form-group">
+																		<label class="col-md-4 control-label">Address</label>
+																		<div class="col-md-6  inputGroupContainer">
+																		  <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+																			<input name="address" placeholder="{{posts[4]}}" value="{{posts[4]}}" class="form-control" type="text">
+																		  </div>
+																		</div>
+																	  </div>
+																	  
+																	  <!-- Text input-->
+																	  
+																	  <div class="form-group">
+																		<label class="col-md-4 control-label">City</label>
+																		<div class="col-md-6  inputGroupContainer">
+																		  <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+																			<input name="city" placeholder="{{posts[5]}}" value="{{posts[5]}}" class="form-control"  type="text">
+																		  </div>
+																		</div>
+																	  </div>
+																	  
+																	  <div class="form-group">
+																		<label class="col-md-4 control-label">State</label>
+																		<div class="col-md-6  inputGroupContainer">
+																		  <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+																			<input name="state" placeholder="{{posts[6]}}" value="{{posts[6]}}" class="form-control"  type="text">
+																		  </div>
+																		</div>
+																	  </div>
+																	  
+																	  
+																	  <!-- Text input-->
+																	  
+																	  <div class="form-group">
+																		<label class="col-md-4 control-label">Zip Code</label>
+																		<div class="col-md-6  inputGroupContainer">
+																		  <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+																			<input name="zip" placeholder="{{posts[7]}}" value="{{posts[7]}}" class="form-control"  type="text">
+																		  </div>
+																		</div>
+																	  </div>
+																	  
+																   
+																	  
+																   
+																		<!-- Text input-->
+																	  <div class="form-group">
+																		<label class="col-md-4 control-label">E-Mail</label>
+																		<div class="col-md-6  inputGroupContainer">
+																		  <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+																			<input name="email" placeholder="{{posts[8]}}" value="{{posts[8]}}" class="form-control"  type="text">
+																		  </div>
+																		</div>
+																	  </div>
+																	  
+																	  <div class="form-group">
+																		<label class="col-md-4 control-label">Login Password</label>
+																		<div class="col-md-6  inputGroupContainer">
+																		  <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+																			<input name="pwd" placeholder="{{posts[9]}}" value="{{posts[9]}}" class="form-control"  type="password">
+																		  </div>
+																		</div>
+																	  </div>
+																	  
+																	  
+																	  <div class="form-group">
+																		<label class="col-md-4 control-label">Website</label>
+																		<div class="col-md-6  inputGroupContainer">
+																		  <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-comment"></i></span>
+																			<input name="website" placeholder="{{posts[10]}}" value="{{posts[10]}}" class="form-control"  type="text">
+																		  </div>
+																		</div>
+																	  </div>
+																	  
+																	
+																	   
+																	 
+																  
+																	  <!-- Button -->
+																	  
+																	  
+																	  
+																	  <br><br>
+																	  <h2 class="title text-center">School Coordinator's Details</h2>
+																	  <div class="form-group">
+																		<label class="col-md-4 control-label">Name</label>
+																		<div class="col-md-6  inputGroupContainer">
+																		  <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+																			<input name="c1name" placeholder="{{posts[11]}}" value="{{posts[11]}}" class="form-control"  type="text">
+																		  </div>
+																		</div>
+																	  </div>
+																	  
+																	  <div class="form-group">
+																		<label class="col-md-4 control-label">Designation</label>
+																		<div class="col-md-6  inputGroupContainer">
+																		  <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
+																			<input name="c1designation" placeholder="{{posts[12]}}" value="{{posts[12]}}" class="form-control"  type="text">
+																		  </div>
+																		</div>
+																	  </div>
+																	  
+																	  
+																	  <div class="form-group">
+																		<label class="col-md-4 control-label">Phone #</label>
+																		<div class="col-md-6  inputGroupContainer">
+																		  <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+																			<input name="c1phone" placeholder="{{posts[13]}}" value="{{posts[13]}}" class="form-control" type="text">
+																		  </div>
+																		</div>
+																	  </div>
+																	  
+																	   <div class="form-group">
+																		<label class="col-md-4 control-label">E-Mail</label>
+																		<div class="col-md-6  inputGroupContainer">
+																		  <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+																			<input name="c1email" placeholder="{{posts[14]}}" value="{{posts[14]}}" class="form-control"  type="text">
+																		  </div>
+																		</div>
+																	  </div>
+																	  
+																	  <br><br>
+																	  <h2 class="title text-center">School Coordinator's Details</h2>
+																	  
+																		  <div class="form-group">
+																		<label class="col-md-4 control-label">Name</label>
+																		<div class="col-md-6  inputGroupContainer">
+																		  <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+																			<input name="c2name" placeholder="{{posts[15]}}" value="{{posts[15]}}" class="form-control"  type="text">
+																		  </div>
+																		</div>
+																	  </div>
+																	  
+																	  <div class="form-group">
+																		<label class="col-md-4 control-label">Designation</label>
+																		<div class="col-md-6  inputGroupContainer">
+																		  <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
+																			<input name="c2designation" placeholder="{{posts[16]}}" value="{{posts[16]}}" class="form-control"  type="text">
+																		  </div>
+																		</div>
+																	  </div>
+																	  
+																	  
+																	  <div class="form-group">
+																		<label class="col-md-4 control-label">Phone #</label>
+																		<div class="col-md-6  inputGroupContainer">
+																		  <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+																			<input name="c2phone" placeholder="{{posts[17]}}" value="{{posts[17]}}" class="form-control" type="text">
+																		  </div>
+																		</div>
+																	  </div>
+																	  
+																	   <div class="form-group">
+																		<label class="col-md-4 control-label">E-Mail</label>
+																		<div class="col-md-6  inputGroupContainer">
+																		  <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+																			<input name="c2email" placeholder="{{posts[18]}}" value="{{posts[18]}}" class="form-control"  type="text">
+																		  </div>
+																		</div>
+																	  </div><br>
+
+																	  
+																			<div class="form-group">
+																		<label class="col-md-4 control-label"></label>
+																		<div class="col-md-4">
+																		  <button type="submit" class="btn btn-warning" name="id" value="{{posts[19]}}">Save Changes <span class="glyphicon glyphicon-send"></span></button>
+																		</div>
+																	  </div>
+
+																	</fieldset>
+																  </form>
+													</div>
+												  </div>
+												  
+												</div>
+											  </div>
+
+	
+	
+    
+    <!-- ******FOOTER****** --> 
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row">  
+					 <div class="footer-col links col-md-3 col-xs-12">
+                        <div class="footer-col-inner">
+                            <h3 class="title">Register</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="register/school"><i class="fa fa-caret-right"></i>School Registration</a></li>
+                                <li><a href="register/student"><i class="fa fa-caret-right"></i>Student Registration</a></li>
+                                <li><a href="register/volunteer"><i class="fa fa-caret-right"></i>Volunteer Registration</a></li>
+                                <li><a href="register/internship"><i class="fa fa-caret-right"></i>Internship Registration</a></li>
+								<li><a href="register/business"><i class="fa fa-caret-right"></i>Associate Business Partner Registration</a></li>
+                            </ul>
+                        </div><!--//footer-col-inner-->
+                    </div><!--//foooter-col--> 
+					
+                   
+                                
+                    <div class="footer-col links col-md-3 col-xs-12">
+                        <div class="footer-col-inner">
+                            <h3 class="title">Login</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="school-login"><i class="fa fa-caret-right"></i>School Login</a></li>
+                                <li><a href="student-login"><i class="fa fa-caret-right"></i>Student Login</a></li>
+                                
+                            </ul>
+                        </div><!--//footer-col-inner-->            
+                    </div><!--//foooter-col-->   
+					
+					 <div class="footer-col links col-md-3 col-xs-12">
+                        <div class="footer-col-inner">
+                            <h3 class="title">Activites</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="oat"><i class="fa fa-caret-right"></i>OAT</a></li>
+                                <li><a href="insaf"><i class="fa fa-caret-right"></i>INSAF</a></li>
+                                <li><a href="activity/events"><i class="fa fa-caret-right"></i>Events</a></li>
+                                <li><a href="activity/csr"><i class="fa fa-caret-right"></i>CSR</a></li>
+                                <li><a href="activity/reward"><i class="fa fa-caret-right"></i>Rewards</a></li>
+                            </ul>
+                        </div><!--//footer-col-inner-->
+                    </div><!--//foooter-col--> 
+                    <div class="footer-col contact col-xs-12 col-md-3">
+                        <div class="footer-col-inner">
+                            <h3 class="title">Contact us</h3>                          
+                            <p class="adr clearfix">
+                                <i class="fa fa-map-marker pull-left"></i>        
+                                <span class="adr-group pull-left">       
+                                    <span class="street-address">Talent Treasure Hunt Pvt. Ltr.,</span><br>
+                                    <span class="region">A-404, Shangrila, Hermitage Society,</span><br>
+                                    <span class="postal-code">Mira Road (East),</span><br>
+                                    <span class="country-name">Mumbai - 401107.</span>
+                                </span>                            </p>
+                            <p class="tel"><i class="fa fa-phone"></i>+91 8652542430</p>
+                            <p class="email"><i class="fa fa-envelope-o"></i>sanjay.singh@tthpl.in</p>
+							<ul class="social list-inline">
+                                <li><a href="https://twitter.com/3rdwave_themes" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>        
+                                <li class="row-end"><a href="#"><i class="fa fa-rss"></i></a></li>             
+                            </ul>
+						</div><!--//footer-col-inner-->
+                    </div><!--//contact-->   
+                </div><!--//row-->
+            </div><!--//container-->
+        </div><!--//footer-content-->
+        <div class="bottom-bar">
+            <div class="container">
+                <small class="copyright">Copyright @ <a href="#" target="_blank">Treasure Talent Hunt Pvt.Ltd.</a></small>                
+            </div><!--//container-->
+        </div><!--//bottom-bar-->
+    </footer><!--//footer-->
+    
+ 
+   
+ 
+    <!-- Javascript -->          
+    <script type="text/javascript" src="/static/js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="/static/js/bootstrap-hover-dropdown.min.js"></script>
+    <script type="text/javascript" src="/static/js/back-to-top.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.flexslider-min.js"></script>     
+    <script type="text/javascript" src="/static/js/main.js"></script>
+	
+	
+	
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+
+	 <script src="static/js/index.js"></script>
+<script type="text/javascript">
+ 
+   $(document).ready(function() {
+    $('#reg_form').bootstrapValidator({
+        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            first_name: {
+                validators: {
+                        stringLength: {
+                        min: 2,
+                    },
+                        notEmpty: {
+                        message: 'Please supply your first name'
+                    }
+                }
+            },
+             last_name: {
+                validators: {
+                     stringLength: {
+                        min: 2,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your last name'
+                    }
+                }
+            },
+           
+            phone: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please supply your phone number'
+                    },
+                    phone: {
+                        country: 'IN',
+                        message: 'Please supply a vaild phone number with area code'
+                    }
+                }
+            },
+            address: {
+                validators: {
+                     stringLength: {
+                        min: 8,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your street address'
+                    }
+                }
+            },
+            city: {
+                validators: {
+                     stringLength: {
+                        min: 4,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your city'
+                    }
+                }
+            },
+            state: {
+                 validators: {
+                     stringLength: {
+                        min: 4,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your city'
+                    }
+                }
+            },
+            zip: {
+                validators: {
+                     stringLength: {
+                        min: 6,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your last name'
+                    },
+					 integer: {
+                        message: 'The value is not an integer'
+                    }
+                }
+            },
+		comment: {
+                validators: {
+                      stringLength: {
+                        min: 10,
+                        max: 200,
+                        message:'Please enter at least 10 characters and no more than 200'
+                    },
+                    notEmpty: {
+                        message: 'Please supply a description about yourself'
+                    }
+                    }
+                 },	
+	 email: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please supply your email address'
+                    },
+                    emailAddress: {
+                        message: 'Please supply a valid email address'
+                    }
+                }
+            },
+					
+	password: {
+            validators: {
+                identical: {
+                    field: 'confirmPassword',
+                    message: 'Confirm your password below - type same password please'
+                }
+            }
+        },
+        confirmPassword: {
+            validators: {
+                identical: {
+                    field: 'password',
+                    message: 'The password and its confirm are not the same'
+                }
+            }
+         },
+			
+            
+            }
+        })
+		
+ 	
+        .on('success.form.bv', function(e) {
+            $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+                $('#reg_form').data('bootstrapValidator').resetForm();
+
+            // Prevent form submission
+            e.preventrefault();
+
+            // Get the form instance
+            var $form = $(e.target);
+
+            // Get the BootstrapValidator instance
+            var bv = $form.data('bootstrapValidator');
+
+            // Use Ajax to submit form data
+            $.post($form.attr('action'), $form.serialize(), function(result) {
+                console.log(result);
+            }, 'json');
+        });
+});
+
+
+ 
+ </script>
+    
+            
+</body>
+</html> 

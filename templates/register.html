@@ -1,0 +1,1887 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Talent Treasure Hunt Foundation</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="/static/favicon.ico">  
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300' rel='stylesheet' type='text/css'> 
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
+	<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="/static/css/font-awesome.css">
+    <link rel="stylesheet" href="/static/css/flexslider.css">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="/static/css/styles.css">
+    <script type="text/javascript" src="/static/js/jquery-1.12.3.min.js"></script>
+</head> 
+
+<script>
+$(document).ready(function(){
+$( "#{{tab}}_tab" ).trigger( "click" );
+});
+</script>
+<script>
+var error="{{request.args.get('error')}}";
+if(error!='None'){
+alert(error);
+}
+</script>
+
+<body class="home-page">   
+    <!-- ******HEADER****** --> 
+    <header id="header" class="header navbar-fixed-top">  
+        <div class="container">          
+            <h1 id="logo" class="logo row">
+                <a href="/"><img id="logo-img" class="col-xs-12" src="/static/logo1.png"></a>
+            </h1><!--//logo-->
+            <nav class="main-nav navbar-right" role="navigation">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button><!--//nav-toggle-->
+                </div><!--//navbar-header-->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item"><a href="/">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="foundation">Foundation <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../oat">OAT</a></li>
+                                <li><a href="../insaf">INSAF</a></li>                   
+                            </ul> </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="activity">Activities <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../activity/events">Events</a></li>
+                                <li><a href="../activity/csr">CSR</a></li>
+                                <li><a href="../activity/reward">Rewards</a></li>              
+                            </ul>                            
+                        </li>
+                        <li class="nav-item"><a href="../team">Team</a></li>   
+						<li class="nav-item"><a href="../faq">FAQ</a></li>
+						<li class="active nav-item dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="register">Register <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../register/school">School Registration</a></li>
+                                <li><a href="../register/student">Student Registration</a></li>  
+								<li><a href="../register/internship">Internship Registration</a></li>
+                                <li><a href="../register/volunteer">Volunteer Registration</a></li>  				
+                                <li><a href="../register/business">Associate Bussiness Partner Registration</a></li>				
+                            </ul>                            
+                        </li>
+						<li class="nav-item dropdown  nav-item-cta last">
+                            <a class="btn btn-cta btn-cta-secondary dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Login <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../school-login">School Login</a></li>
+                                <li><a href="../student-login">Student Login</a></li>                   
+                            </ul>                            
+                        </li>
+                    </ul><!--//nav-->
+                </div><!--//navabr-collapse-->
+            </nav><!--//main-nav-->                     
+        </div><!--//container-->
+    </header><!--//header-->
+    
+    <div class="headline-bg">
+    </div><!--//headline-bg-->         
+    
+
+
+    
+    <!-- ******Features Section****** -->       
+    <section class="features-tabbed section">
+        <div class="container">
+            <h2 class="title text-center"></h2>
+            <div class="row">
+                <div class=" text-center col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1 col-xs-offset-0">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs text-center" role="tablist">
+                        <li class="active"><a id="school_tab" href="#school" role="tab" data-toggle="tab"><i class="fa fa-cloud-upload"></i><br /><span>School</span></a></li>
+                        <li><a id="student_tab" href="#student" role="tab" data-toggle="tab"><i class="fa fa-tachometer"></i><br /><span>Student</span></a></li>
+                        <li><a id="volunteer_tab" href="#volunteer" role="tab" data-toggle="tab"><i class="fa fa-photo"></i><br /><span></span>Volunteer</a></li>
+                        <li><a id="internship_tab" href="#internship" role="tab" data-toggle="tab"><i class="fa fa-photo"></i><br /><span>Internship</span></a></li>
+                        <li class="last"><a id="business_tab" href="#business" role="tab" data-toggle="tab"><i class="fa fa-users"></i><br /><span>Business Partner</span></a></li>
+                    </ul><!--//nav-tabs-->
+                    
+                    <!-- Tab panes -->
+                    <div class="tab-content" style="background-color:white; opacity:1; border-bottom:1px">
+                        <div class="tab-pane fade in active" id="school">
+                            
+							<div class="form-container col-xs-12 col-md-12" style="background-color:#f4f4f4"><br><br><br>
+								<h2 class="title text-center">School Registration</h2>
+								<form class="form-horizontal" action="../school_reg" method="post"  id="reg_form">
+    <fieldset>
+      
+   
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">School Name</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input  name="sname" placeholder="School Name" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	   <div class="form-group">
+        <label class="col-md-4 control-label">School Code</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input  name="sid" placeholder="School Code" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label" >Board</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"></i></span>
+            <input name="board" placeholder="Board" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label">Type</label>
+        <div class="col-md-6 selectContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="type" class="form-control selectpicker" >
+              <option value=" " >Please select your school type</option>
+              <option value="Government">Government</option>
+			  <option value="Private">Private</option>
+			</select>
+          </div>
+        </div>
+      </div>
+      
+      
+    
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">Phone #</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+            <input name="phone" placeholder="9876543210" class="form-control" type="text">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">Address</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="address" placeholder="Address" class="form-control" type="text">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">City</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="city" placeholder="City" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Select Basic -->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">State</label>
+        <div class="col-md-6 selectContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="state" class="form-control selectpicker" >
+              <option value=" " >Please select your state</option>
+              <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+<option value="Daman and Diu">Daman and Diu</option>
+<option value="Delhi">Delhi</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Lakshadweep">Lakshadweep</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Orissa">Orissa</option>
+<option value="Pondicherry">Pondicherry</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttaranchal">Uttaranchal</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="West Bengal">West Bengal</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">Zip Code</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="zip" placeholder="Zip Code" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      
+   
+      
+   
+        <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">E-Mail</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label">Login Password</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-qrcode"></i></span>
+            <input name="pwd" placeholder="************" class="form-control"  type="password">
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label">Website</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-comment"></i></span>
+            <input name="website" placeholder="Enter the Link" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      
+    
+       
+     
+  
+      <!-- Button -->
+	  
+	  
+	  
+	  <br><br>
+	  <h2 class="title text-center">School Coordinator's Details</h2>
+	  <div class="form-group">
+        <label class="col-md-4 control-label">Name</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="c1name" placeholder="Name" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label">Designation</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
+            <input name="c1designation" placeholder="Designation" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label">Phone #</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+            <input name="c1phone" placeholder="9876543210" class="form-control" type="text">
+          </div>
+        </div>
+      </div>
+	  
+	   <div class="form-group">
+        <label class="col-md-4 control-label">E-Mail</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <input name="c1email" placeholder="E-Mail Address" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  <br><br>
+	  <h2 class="title text-center">School Coordinator's Details</h2>
+	  
+	  	  <div class="form-group">
+        <label class="col-md-4 control-label">Name</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="c2name" placeholder="Name" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label">Designation</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
+            <input name="c2designation" placeholder="Designation" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label">Phone #</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+            <input name="c2phone" placeholder="9876543210" class="form-control" type="text">
+          </div>
+        </div>
+      </div>
+	  
+	   <div class="form-group">
+        <label class="col-md-4 control-label">E-Mail</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <input name="c2email" placeholder="E-Mail Address" class="form-control"  type="text">
+          </div>
+        </div>
+      </div><br>
+
+	  
+	        <div class="form-group">
+        <label class="col-md-4 control-label"></label>
+        <div class="col-md-4">
+          <button type="submit" class="btn btn-warning" >Agree and Submit <span class="glyphicon glyphicon-send"></span></button>
+        </div>
+      </div>
+
+    </fieldset>
+  </form>
+</div>
+
+
+<div class="col-lg-3">
+ <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- responsive hotel -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0173509626327009"
+     data-ad-slot="7944464098"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+<div class="row" align="left">
+ <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- responsive hotel -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0173509626327009"
+     data-ad-slot="7944464098"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+							
+							
+                        </div><!--//tab-pane-->
+                        <div class="tab-pane" id="student">
+                           
+						   
+<div class="form-container col-xs-12 col-md-12" style="background-color:#f4f4f4"><br><br><br>
+	   <h2 class="title text-center">Student Registration</h2>
+	   <form class="form-horizontal" action="../student_reg" method="post"  id="reg_form"  enctype="multipart/form-data">
+		<fieldset>
+	
+      <div class="form-group">
+        <label class="col-md-4 control-label">First Name</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input  name="fname" placeholder="First Name" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label" >Last Name</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="lname" placeholder="Last Name" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label" >Date of Birth</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+            <input name="dob" placeholder="dd/mm/yyyy" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	 
+	  
+	   <div class="form-group">
+        <label class="col-md-4 control-label">Gender</label>
+        <div class="col-md-6 selectContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="gender" class="form-control selectpicker" >
+              <option value=" " >Please select your gender</option>
+              <option value="male">Male</option>
+			  <option value="female">Female</option>
+			</select>
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label" >Class</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+            <input name="class" placeholder="Class" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      
+	  <div class="form-group">
+        <label class="col-md-4 control-label" >Section</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+            <input name="section" placeholder="Section" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label" >Roll No.</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+            <input name="rollno" placeholder="Roll No." class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label" >School ID</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="sname" placeholder="School Name" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">Student Phone Number</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+            <input name="phone" placeholder="9876543210" class="form-control" type="text">
+          </div>
+        </div>
+      </div>
+    
+	  <div class="form-group">
+        <label class="col-md-4 control-label" >Parent's/Gaurdian's Name</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="pname" placeholder="Enter Here" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">Parent's/Gaurdian's Mobile Number</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+            <input name="mobile" placeholder="9876543210" class="form-control" type="text">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">Parent's/Gaurdian's Work Number</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+            <input name="work" placeholder="9876543210" class="form-control" type="text">
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">Address</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="address" placeholder="Address" class="form-control" type="text">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">City</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="city" placeholder="city" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Select Basic -->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">State</label>
+        <div class="col-md-6 selectContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="state" class="form-control selectpicker" >
+              <option value=" " >Please select your state</option>
+              <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+<option value="Daman and Diu">Daman and Diu</option>
+<option value="Delhi">Delhi</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Lakshadweep">Lakshadweep</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Orissa">Orissa</option>
+<option value="Pondicherry">Pondicherry</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttaranchal">Uttaranchal</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="West Bengal">West Bengal</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">Zip Code</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="zip" placeholder="Zip Code" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      
+   
+      
+   
+        <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">E-Mail</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	   <div class="form-group">
+        <label class="col-md-4 control-label">Login Password</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <input name="pwd" placeholder="Password" class="form-control"  type="password">
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label" >Percentage in Last Class</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+            <input name="percent" placeholder="Enter" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label" >Photo of Student</label>
+        <div class="col-md-6  inputGroupContainer">
+		<input name="pic" id="input-1" type="file" class="file">
+        </div>
+      </div>
+	 
+	  
+	  <p>My Child would like to participate in Olympiad Aptitude Test- 2016-17
+Fee of INR 225 per student (includes Maths, Science, English and Logical reasoning)
+I hereby declare that all details mentioned above are true to the best of my knowledge. I have read and understood the terms of participation governing 2016-17 the Olympiad Aptitude Test and agree that I and my child abide by them.</p>
+ 
+
+     
+  
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label"></label>
+        <div class="col-md-4">
+          <button type="submit" class="btn btn-warning" >Agree and Submit <span class="glyphicon glyphicon-send"></span></button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>
+
+
+<div class="col-lg-3">
+ <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- responsive hotel -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0173509626327009"
+     data-ad-slot="7944464098"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+<div class="row" align="left">
+ <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- responsive hotel -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0173509626327009"
+     data-ad-slot="7944464098"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+						   
+						   
+						   
+						   
+</div><!--//tab-pane-->
+<div class="tab-pane" id="volunteer">
+ <div class="form-container col-xs-12 col-md-12" style="background-color:#f4f4f4"><br><br><br>
+   <h2 class="title text-center">Volunteer Registration</h2>
+   <form class="form-horizontal" action="../volunteer_reg" method="post"  id="reg_form">
+    <fieldset>
+      
+     
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">First Name</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input  name="fname" placeholder="First Name" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label" >Last Name</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="lname" placeholder="Last Name" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label" >Date Of Birth</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+            <input name="dob" placeholder="dd/mm/yyyy" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      
+    
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">Phone #</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+            <input name="phone" placeholder="9876543210" class="form-control" type="text">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">Address</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="address" placeholder="Address" class="form-control" type="text">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">City</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="city" placeholder="city" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Select Basic -->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">State</label>
+        <div class="col-md-6 selectContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="state" class="form-control selectpicker" >
+              <option value=" " >Please select your state</option>
+              <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+<option value="Daman and Diu">Daman and Diu</option>
+<option value="Delhi">Delhi</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Lakshadweep">Lakshadweep</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Orissa">Orissa</option>
+<option value="Pondicherry">Pondicherry</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttaranchal">Uttaranchal</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="West Bengal">West Bengal</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">Zip Code</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="zip" placeholder="Zip Code" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      
+   
+      
+   
+        <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">E-Mail</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	   <div class="form-group">
+        <label class="col-md-4 control-label" >Skills</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="skill" placeholder="Tell us what you are good at......." class="form-control"  type="comment">
+          </div>
+        </div>
+      </div>
+      
+	  	  <div class="form-group">
+        <label class="col-md-4 control-label">Marital Status</label>
+        <div class="col-md-6 selectContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="marital" class="form-control selectpicker" >
+              <option value=" " >Chose from here</option>
+              <option value="single">Single</option>
+			  <option value="married">Married</option>
+			  <option value="confidential">Do not want to disclose</option>
+			</select>
+          </div>
+        </div>
+      </div>
+	  
+	  	   <div class="form-group">
+        <label class="col-md-4 control-label" >Areas of Interest</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group">
+           <div class="checkbox">
+				<label><input type="checkbox" name="mentor"  value="yes">Mentoring Children</label>
+			</div>
+			<div class="checkbox">
+				<label><input type="checkbox" name="tutor"  value="yes">Tutoring</label>
+			</div>
+			<div class="checkbox">
+				<label><input type="checkbox" name="teaching" value="yes">Teaching a Hobby</label>
+			</div>
+			<div class="checkbox">
+				<label><input type="checkbox" name="counselling"  value="yes">Career Counselling</label>
+			</div>
+			<div class="checkbox">
+				<label><input type="checkbox" name="organising" value="yes">Organising Competitions/Activities</label>
+			</div>
+			<div class="checkbox">
+				<label><input type="checkbox" name="fund" value="yes">Fund Raising Activities</label>
+			</div>
+			<div class="checkbox">
+				<label><input type="checkbox" name="projects" value="yes">Executing Projects/Events</label>
+			</div>
+			<div class="checkbox">
+				<label><input type="checkbox" name="sporting" value="yes">Coaching Sporting Activities</label>
+			</div>
+          </div>
+        </div>
+      </div>
+	  
+	  	   <div class="form-group">
+        <label class="col-md-4 control-label" >Preferred Days</label>
+        <div class="col-md-6  inputGroupContainer">
+		<div class="input-group">
+           
+		 <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+            <input name="days" placeholder="Enter Days Here" class="form-control"  type="text">
+         
+        </div>
+		</div>
+      </div>
+
+	  	   <div class="form-group">
+        <label class="col-md-4 control-label" >Preferred Timing</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+            <input name="time" placeholder="Enter Time Here" class="form-control"  type="text">
+          </div>
+        </div>
+      </div><br>
+
+
+       
+     
+  
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label"></label>
+        <div class="col-md-4">
+          <button type="submit" class="btn btn-warning" >Agree and Submit <span class="glyphicon glyphicon-send"></span></button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>
+
+
+<div class="col-lg-3">
+ <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- responsive hotel -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0173509626327009"
+     data-ad-slot="7944464098"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+<div class="row" align="left">
+ <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- responsive hotel -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0173509626327009"
+     data-ad-slot="7944464098"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>                               
+                        </div><!--//tab-pane-->
+						
+						
+						
+						<!-- INTERNSHIP FORM BEGINS -->
+                        <div class="tab-pane " id="internship">
+                           
+ <div class="form-container col-xs-12 col-md-12" style="background-color:#f4f4f4">
+   <form class="form-horizontal" action="../intern_reg" method="post"  id="reg_form"  enctype="multipart/form-data"><br><br><br>
+   <h2 class="title text-center">Internship Registration</h2>
+    <fieldset>
+      
+     
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">First Name</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input  name="fname" placeholder="First Name" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label" >Last Name</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="lname" placeholder="Last Name" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label" >Date Of Birth</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+            <input name="dob" placeholder="dd/mm/yyyy" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label">Gender</label>
+        <div class="col-md-6 selectContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="gender" class="form-control selectpicker" >
+              <option value=" " >Please select your gender</option>
+              <option value="male">Male</option>
+			  <option value="female">Female</option>
+			</select>
+          </div>
+        </div>
+      </div>
+      
+    
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">Phone #</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+            <input name="phone" placeholder="9876543210" class="form-control" type="text">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">Address</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="address" placeholder="Address" class="form-control" type="text">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">City</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="city" placeholder="City" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Select Basic -->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">State</label>
+        <div class="col-md-6 selectContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="state" class="form-control selectpicker" >
+              <option value=" " >Please select your state</option>
+              <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+<option value="Daman and Diu">Daman and Diu</option>
+<option value="Delhi">Delhi</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Lakshadweep">Lakshadweep</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Orissa">Orissa</option>
+<option value="Pondicherry">Pondicherry</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttaranchal">Uttaranchal</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="West Bengal">West Bengal</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">Zip Code</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="zip" placeholder="Zip Code" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      
+   
+      
+   
+        <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">E-Mail</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	   <div class="form-group">
+        <label class="col-md-4 control-label" >Languages Known</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+            <input name="language" placeholder="Enter Here" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      
+	
+	  
+	  	   <div class="form-group">
+        <label class="col-md-4 control-label" >University Name</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="university" placeholder="Enter Here" class="form-control"  type="text">
+          </div>
+        </div>
+      </div><br>
+	  
+	  <p><b>Besides, the above did you take any training, did any additional courses? If yes, please mention.</b></p>
+	    <div class="form-group">
+        <div class="col-md-12  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-signal"></i></span>
+            <input name="courses" placeholder="Enter Here" class="form-control"  type="text">
+          </div>
+        </div>
+      </div><br>
+	  
+	  <p><b>Please mention if you have any specific skills and know-how which would be useful to consider your application? These may include skills such as public relations, web designing, graphics and art design, model-making, communication etc.</b></p>
+	    <div class="form-group">
+        <div class="col-md-12  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-signal"></i></span>
+            <input name="skills" placeholder="Enter Here" class="form-control"  type="text">
+          </div>
+        </div>
+      </div><br><br>
+	  
+	  	   <div class="form-group">
+        <label class="col-md-4 control-label" >Number of Months</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+            <input name="months" placeholder="Enter Here" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+
+	  	   <div class="form-group">
+        <label class="col-md-4 control-label" >From Date</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+            <input name="from" placeholder="Enter Time Here" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label" >To Date</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+            <input name="to" placeholder="Enter Time Here" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label" >Field Of Interest</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-gift"></i></span>
+            <input name="interest" placeholder="Enter Time Here" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label" >Preferred Location</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+            <input name="location" placeholder="Enter Location" class="form-control"  type="text">
+          </div>
+        </div>
+      </div><br><br>
+
+	 <p><b>What motivated you to apply for an internship with TTHPL? Please mention in not more than 200 words.</b></p>
+	    <div class="form-group">
+        <div class="col-md-12  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+            <input name="motivation" placeholder="Type Here." class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label" >Upload Photograph</label>
+        <div class="col-md-6  inputGroupContainer">
+		<input name="pic" id="input-1" type="file" class="file">
+        </div>
+      </div>
+
+       
+     
+  
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label"></label>
+        <div class="col-md-4">
+          <button type="submit" class="btn btn-warning" >Agree and Submit <span class="glyphicon glyphicon-send"></span></button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>
+
+
+<div class="col-lg-3">
+ <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- responsive hotel -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0173509626327009"
+     data-ad-slot="7944464098"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+<div class="row" align="left">
+ <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- responsive hotel -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0173509626327009"
+     data-ad-slot="7944464098"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+						   
+						   
+                        </div> <!-- END OF INTERNSHIP FORM -->
+						
+						
+						
+						<div class="tab-pane" id="business">
+                              <!-- ******FAQ Section****** --> 
+    <section class="faq section has-bg-color">
+        <div class="container">
+            
+           
+                <div class="col-md-7">
+				<h2 class="title text-center">Business Partner Registration</h2>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><a data-parent="#accordion"
+                            data-toggle="collapse" class="panel-toggle" href="#faq1"><i class="fa fa-plus-square"></i>Responsibilities</a></h4>
+                        </div>
+            
+                        <div class="panel-collapse collapse" id="faq1">
+                            <div class="panel-body">
+								1) Approach head of the schools/institutions and teachers to introduce the TTHPL in their schools and motivate their students to participate in this examination.<br>
+2) Liasoning between the Schools and TTHPL to ensure smooth progress of the contest.<br>
+3) Developing healthy relationship with school.<br>
+4) Facilitating TTHPL all the activities for conducting contest.<br>
+5) Ensuring smooth progress for conducting contest.<br>
+6) Responsible for all follow-up activities.<br>
+7) Responsible for getting critical feedback from the partners and students.<br>
+8) Regular reporting to the authorized person at Head Office.<br>
+9) Help us in arranging the Test Centre and conducting the examination. (We will bear the examination expenditure) If required.<br>
+10) Arrange invigilators in all the test centres in your area for the smooth conducting of the examination. If required.
+                            </div>
+                        </div>
+                    </div><!--//panel-->
+            
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><a data-parent="#accordion"
+                            data-toggle="collapse" class="panel-toggle" href="#faq2"><i class="fa fa-plus-square"></i>Desired Profile</a></h4>
+                        </div>
+            
+                        <div class="panel-collapse collapse" id="faq2">
+                            <div class="panel-body">
+								1) Post Graduate/ Graduate/Organization with good communication skills and an attitude of accepting challenges.<br>
+2) Ready to work on a freelance basis. Remuneration will be paid in the form of incentives; the potential to earn is unlimited. <br>
+3) Willing to work in the field of education and travel locally within the city/ town.<br>
+4) A quick learner, with a strong desire to do something "different", and a liking for education.<br>
+                            </div>
+                        </div>
+                    </div><!--//panel-->
+            
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><a data-parent="#accordion"
+                            data-toggle="collapse" class="panel-toggle" href="#faq3"><i class="fa fa-plus-square"></i>Remuneration: (Freelance commission basis)</a></h4>
+                        </div>
+            
+                        <div class="panel-collapse collapse" id="faq3">
+                            <div class="panel-body"><br><br>
+							<img src="http://www.tthpl.in/images/Remuneration.jpg"><br><br>
+                                 1) Rs.15/-per student for enrolling up to 1 to 10,000 students.<br>
+2) Rs.20/-per student for enrolling more than 10001 students.<br>
+                            </div>
+                        </div>
+                    </div><!--//panel-->
+                    
+                   
+                    
+                    
+					
+                                            
+                            
+									<!-- Business FORM BEGINS -->
+<div class="tab-pane" id="feature-4">
+
+ <div class="form-container col-xs-12 col-md-12">
+   <form class="form-horizontal" action="../business_reg" method="post"  id="reg_form"  enctype="multipart/form-data">
+    <fieldset>
+      
+     
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">First Name</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input  name="fname" placeholder="First Name" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label" >Last Name</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="lname" placeholder="Last Name" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label" >Date Of Birth</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+            <input name="dob" placeholder="dd/mm/yyyy" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label" >Occupation</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
+            <input name="occupation" placeholder="What do you do?" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label">Gender</label>
+        <div class="col-md-6 selectContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="gender" class="form-control selectpicker" >
+              <option value=" " >Please select your gender</option>
+              <option value="male">Male</option>
+			  <option value="female">Female</option>
+			</select>
+          </div>
+        </div>
+      </div>
+      
+    
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">Phone #</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+            <input name="phone" placeholder="9876543210" class="form-control" type="text">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">Address</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="address" placeholder="Address" class="form-control" type="text">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">City</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="city" placeholder="city" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Select Basic -->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">State</label>
+        <div class="col-md-6 selectContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="state" class="form-control selectpicker" >
+              <option value=" " >Please select your state</option>
+              <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+<option value="Daman and Diu">Daman and Diu</option>
+<option value="Delhi">Delhi</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Lakshadweep">Lakshadweep</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Orissa">Orissa</option>
+<option value="Pondicherry">Pondicherry</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttaranchal">Uttaranchal</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="West Bengal">West Bengal</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      
+      <div class="form-group">
+        <label class="col-md-4 control-label">Zip Code</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input name="zip" placeholder="Zip Code" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+      
+   
+      
+   
+        <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">E-Mail</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	   <div class="form-group">
+        <label class="col-md-4 control-label" >PAN Number</label>
+        <div class="col-md-6  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"></i></span>
+            <input name="pan" placeholder="Enter Here." class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label" >Upload Photograph</label>
+        <div class="col-md-6  inputGroupContainer">
+		<input name="pic" id="input-1" type="file" class="file">
+        </div>
+      </div>
+	  
+	  <div class="form-group">
+        <label class="col-md-4 control-label" >Upload Resume</label>
+        <div class="col-md-6  inputGroupContainer">
+		<input name="resume" id="input-1" type="file" class="file">
+        </div>
+      </div>
+      </div><br><br>
+	  
+	  <p><b>I would like to act as an Associate Business Partner at (Name of the City/Town):</b></p>
+	    <div class="form-group">
+        <div class="col-md-12  inputGroupContainer">
+          <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+            <input name="location" placeholder="Enter Here." class="form-control"  type="text">
+          </div>
+        </div>
+      </div><br><br>
+	  
+	  <p>I am accepting your terms and conditions given of this Acceptance Letter. I would like to act as a Associate Business Partner for the TTHPL.
+
+Declaration:
+I/We undersigned, hereby assure that the information given above is true & correct to the best of my knowledge. 
+I have understood and agreed that any misrepresentation or concealment of facts will justify the denial/ cancellation 
+of my association & at any stage of TTHPL and further. I have understood all the details and particulars & would abide 
+by all terms & conditions of TTHPL. In any matter concerning TTHPL, the decision of Managing Director of Talent Treasure Hunt Pvt. Ltr. 
+shall be final & binding to me/us.
+</p>
+     
+  
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label"></label>
+        <div class="col-md-4">
+          <button type="submit" class="btn btn-warning" >Agree and Submit <span class="glyphicon glyphicon-send"></span></button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>
+
+
+<div class="col-lg-3">
+ <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- responsive hotel -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0173509626327009"
+     data-ad-slot="7944464098"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+<div class="row" align="left">
+ <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- responsive hotel -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0173509626327009"
+     data-ad-slot="7944464098"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+						   
+						   
+                        </div> <!-- Business Partner Form Ends -->
+						
+						
+						 </div>
+           
+          
+        </div><!--//container-->        
+    </section><!--//faq-->   
+						
+                        </div><!--//tab-pane-->
+                    </div><!--//tab-content-->
+                </div><!--//col-md-x-->
+            </div><!--//row-->
+        </div><!--//container-->
+    </section><!--//features-tabbed-->
+    
+
+	
+
+	
+	
+    
+    <!-- ******FOOTER****** --> 
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row">  
+					 <div class="footer-col links col-md-3 col-xs-12">
+                        <div class="footer-col-inner">
+                            <h3 class="title">Register</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="../register/school"><i class="fa fa-caret-right"></i>School Registration</a></li>
+                                <li><a href="../register/student"><i class="fa fa-caret-right"></i>Student Registration</a></li>
+                                <li><a href="../register/volunteer"><i class="fa fa-caret-right"></i>Volunteer Registration</a></li>
+                                <li><a href="../register/internship"><i class="fa fa-caret-right"></i>Internship Registration</a></li>
+								<li><a href="../register/business"><i class="fa fa-caret-right"></i>Associate Business Partner Registration</a></li>
+                            </ul>
+                        </div><!--//footer-col-inner-->
+                    </div><!--//foooter-col--> 
+					
+                   
+                                
+                    <div class="footer-col links col-md-3 col-xs-12">
+                        <div class="footer-col-inner">
+                            <h3 class="title">Login</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="../school-login"><i class="fa fa-caret-right"></i>School Login</a></li>
+                                <li><a href="../student-login"><i class="fa fa-caret-right"></i>Student Login</a></li>
+                                
+                            </ul>
+                        </div><!--//footer-col-inner-->            
+                    </div><!--//foooter-col-->   
+					
+					 <div class="footer-col links col-md-3 col-xs-12">
+                        <div class="footer-col-inner">
+                            <h3 class="title">Activites</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="../oat"><i class="fa fa-caret-right"></i>OAT</a></li>
+                                <li><a href="../insaf"><i class="fa fa-caret-right"></i>INSAF</a></li>
+                                <li><a href="../activity/events"><i class="fa fa-caret-right"></i>Events</a></li>
+                                <li><a href="../activity/csr"><i class="fa fa-caret-right"></i>CSR</a></li>
+                                <li><a href="../activity/reward"><i class="fa fa-caret-right"></i>Rewards</a></li>
+                            </ul>
+                        </div><!--//footer-col-inner-->
+                    </div><!--//foooter-col--> 
+                    <div class="footer-col contact col-xs-12 col-md-3">
+                        <div class="footer-col-inner">
+                            <h3 class="title">Contact us</h3>                          
+                            <p class="adr clearfix">
+                                <i class="fa fa-map-marker pull-left"></i>        
+                                <span class="adr-group pull-left">       
+                                    <span class="street-address">Talent Treasure Hunt Pvt. Ltr.,</span><br>
+                                    <span class="region">A-404, Shangrila, Hermitage Society,</span><br>
+                                    <span class="postal-code">Mira Road (East),</span><br>
+                                    <span class="country-name">Mumbai - 401107.</span>
+                                </span>                            </p>
+                            <p class="tel"><i class="fa fa-phone"></i>+91 8652542430</p>
+                            <p class="email"><i class="fa fa-envelope-o"></i>sanjay.singh@tthpl.in</p>
+							<ul class="social list-inline">
+                                <li><a href="https://twitter.com/3rdwave_themes" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>        
+                                <li class="row-end"><a href="#"><i class="fa fa-rss"></i></a></li>             
+                            </ul>
+						</div><!--//footer-col-inner-->
+                    </div><!--//contact-->   
+                </div><!--//row-->
+            </div><!--//container-->
+        </div><!--//footer-content-->
+        <div class="bottom-bar">
+            <div class="container">
+                <small class="copyright">Copyright @ <a href="#" target="_blank">Treasure Talent Hunt Pvt.Ltd.</a></small>                
+            </div><!--//container-->
+        </div><!--//bottom-bar-->
+    </footer><!--//footer-->
+    
+ 
+   
+ 
+    <!-- Javascript -->          
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="/static/js/bootstrap-hover-dropdown.min.js"></script>
+    <script type="text/javascript" src="/static/js/back-to-top.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.flexslider-min.js"></script>     
+    <script type="text/javascript" src="/static/js/main.js"></script>
+	
+	
+	
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+
+	 <script src="/static/js/index.js"></script>
+<script type="text/javascript">
+ 
+   $(document).ready(function() {
+    $('#reg_form').bootstrapValidator({
+        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            first_name: {
+                validators: {
+                        stringLength: {
+                        min: 2,
+                    },
+                        notEmpty: {
+                        message: 'Please supply your first name'
+                    }
+                }
+            },
+             last_name: {
+                validators: {
+                     stringLength: {
+                        min: 2,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your last name'
+                    }
+                }
+            },
+           
+            phone: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please supply your phone number'
+                    },
+                    phone: {
+                        country: 'IN',
+                        message: 'Please supply a vaild phone number with area code'
+                    }
+                }
+            },
+            address: {
+                validators: {
+                     stringLength: {
+                        min: 8,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your street address'
+                    }
+                }
+            },
+            city: {
+                validators: {
+                     stringLength: {
+                        min: 4,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your city'
+                    }
+                }
+            },
+            state: {
+                 validators: {
+                     stringLength: {
+                        min: 4,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your city'
+                    }
+                }
+            },
+            zip: {
+                validators: {
+                     stringLength: {
+                        min: 6,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your last name'
+                    },
+					 integer: {
+                        message: 'The value is not an integer'
+                    }
+                }
+            },
+		comment: {
+                validators: {
+                      stringLength: {
+                        min: 10,
+                        max: 200,
+                        message:'Please enter at least 10 characters and no more than 200'
+                    },
+                    notEmpty: {
+                        message: 'Please supply a description about yourself'
+                    }
+                    }
+                 },	
+	 email: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please supply your email address'
+                    },
+                    emailAddress: {
+                        message: 'Please supply a valid email address'
+                    }
+                }
+            },
+					
+	password: {
+            validators: {
+                identical: {
+                    field: 'confirmPassword',
+                    message: 'Confirm your password below - type same password please'
+                }
+            }
+        },
+        confirmPassword: {
+            validators: {
+                identical: {
+                    field: 'password',
+                    message: 'The password and its confirm are not the same'
+                }
+            }
+         },
+			
+            
+            }
+        })
+		
+ 	
+        .on('success.form.bv', function(e) {
+            $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+                $('#reg_form').data('bootstrapValidator').resetForm();
+
+            // Prevent form submission
+            e.preventrefault();
+
+            // Get the form instance
+            var $form = $(e.target);
+
+            // Get the BootstrapValidator instance
+            var bv = $form.data('bootstrapValidator');
+
+            // Use Ajax to submit form data
+            $.post($form.attr('action'), $form.serialize(), function(result) {
+                console.log(result);
+            }, 'json');
+        });
+});
+
+
+ 
+ </script>
+    
+            
+</body>
+</html> 
+
